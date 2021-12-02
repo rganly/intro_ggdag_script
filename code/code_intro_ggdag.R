@@ -63,6 +63,9 @@ dag_cand3 %>% ggdag_paths(from = "Vitamins", to = "Birth_Defects")
 dag_cand3 %>% ggdag_paths(from = "Vitamins", to = "Birth_Defects",
                           adjust_for = "PNC")
 
+dag_cand3 %>% ggdag_paths(from = "Vitamins", to = "Birth_Defects",
+                          adjust_for = "PNC", shadow=TRUE)
+
 #There's still an open path! What's going on with path 2?
 
 dag_cand3 %>% ggdag_adjust(var = c("PNC"), 
